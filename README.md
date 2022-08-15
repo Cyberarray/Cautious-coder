@@ -4,7 +4,7 @@ This is an example ready-to-deploy java web application built for Tomcat using M
 
 ## Running Locally
 
-(need maven and java installed)
+## (need maven and java installed)
 
 ```
 mvn package
@@ -21,34 +21,4 @@ The application will be available on `http://localhost:8080`.
    mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp
    ```
 
-2. Add the webapp-runner plugin into the `pom.xml`:
 
-   ```
-   <build>
-     <!-- ... -->
-     <plugins>
-       <!-- ... -->
-       <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-dependency-plugin</artifactId>
-         <version>2.3</version>
-         <executions>
-           <execution>
-             <phase>package</phase>
-             <goals><goal>copy</goal></goals>
-             <configuration>
-               <artifactItems>
-                 <artifactItem>
-                   <groupId>com.github.jsimone</groupId>
-                   <artifactId>webapp-runner</artifactId>
-                   <version>8.5.11.3</version>
-                   <destFileName>webapp-runner.jar</destFileName>
-                 </artifactItem>
-               </artifactItems>
-             </configuration>
-           </execution>
-         </executions>
-       </plugin>
-     </plugins>
-   </build>
-   ```
